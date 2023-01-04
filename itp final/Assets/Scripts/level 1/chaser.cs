@@ -12,7 +12,7 @@ public class chaser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 1;
+        speed = 5;
         health = 2f;
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Main Character");
@@ -45,7 +45,7 @@ public class chaser : MonoBehaviour
     }
     private void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.tag == "aoe")
+        if (trigger.gameObject.name == "dangerzone")
         {
             danger = true;
         }
