@@ -40,7 +40,11 @@ public class playerController : MonoBehaviour
             speed = 1;
            
         }
-        if (trigger.gameObject.tag == "5gsafe"){
+    }
+    private void OnTriggerExit(Collider trigger)
+    {
+        if (trigger.gameObject.tag == "5g")
+        {
             speed = 5;
         }
     }
