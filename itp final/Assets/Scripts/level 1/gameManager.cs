@@ -10,10 +10,13 @@ public class gameManager : MonoBehaviour
     public GameObject gameover;
     public float Health;
     public GameObject player;
+    private int health;
+    public TextMeshProUGUI healthText;
     // Start is called before the first frame update
     void Start()
     {
-
+        health = 0;
+        healthText.text = "Health: " + Health;
     }
 
     // Update is called once per frame
