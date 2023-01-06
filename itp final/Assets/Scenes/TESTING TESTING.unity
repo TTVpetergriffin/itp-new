@@ -1786,9 +1786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameover: {fileID: 1258418500}
-  Health: 0
   player: {fileID: 1549983996}
-  healthText: {fileID: 419878496}
 --- !u!4 &959832774
 Transform:
   m_ObjectHideFlags: 0
@@ -3170,15 +3168,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1399441329885589857, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06321463
+      value: 0.06321465
       objectReference: {fileID: 0}
     - target: {fileID: 1399441329885589857, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000021318757
+      value: 0.000000015275214
       objectReference: {fileID: 0}
     - target: {fileID: 1399441329885589857, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000013503583
+      value: -9.675524e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1399441329885589857, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3206,15 +3204,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1399441331083870329, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06321463
+      value: 0.06321465
       objectReference: {fileID: 0}
     - target: {fileID: 1399441331083870329, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000021318757
+      value: 0.000000015275214
       objectReference: {fileID: 0}
     - target: {fileID: 1399441331083870329, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000013503583
+      value: -9.675524e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1399441331578304993, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
       propertyPath: Chaser
@@ -3224,6 +3222,10 @@ PrefabInstance:
       propertyPath: Danger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1399441331578304993, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 419878496}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73c6e1e484b4ad4e900354fa7d2783d, type: 3}
 --- !u!1001 &2873838752544502136

@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
     public float speed;
-    public float health;
+    public int health;
     public float turnSpeed;
     public float horizontalInput;
     public float forwardInput;
+    public TextMeshProUGUI healthText;
     // Start is called before the first frame update
     void Start()
     {
         speed = 5;
         health = 3;
+        UpdateHealth(0);
     }
 
     // Update is called once per frame
@@ -31,6 +36,7 @@ public class playerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health--;
+            UpdateHealth(0);
         }
     }
     private void OnTriggerEnter(Collider trigger)
@@ -47,6 +53,11 @@ public class playerController : MonoBehaviour
         {
             speed = 5;
         }
+    }
+    private void UpdateHealth(int healthToSteal)
+    {
+        health += healthToSteal;
+        healthText.text = "Health: " + health;
     }
 }
 
