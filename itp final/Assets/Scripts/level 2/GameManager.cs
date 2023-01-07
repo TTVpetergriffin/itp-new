@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //public int[] 
     public TextMeshProUGUI Time;
     private int Seconds;
     // Start is called before the first frame update
@@ -35,4 +36,5 @@ public class GameManager : MonoBehaviour
         UpdateTime(1);
         StartCoroutine(clock());
     }
+
 }
