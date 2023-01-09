@@ -9,6 +9,7 @@ TagManager:
   - 5g
   - 5gsafe
   - aoe
+  - Water
   layers:
   - Default
   - TransparentFX
