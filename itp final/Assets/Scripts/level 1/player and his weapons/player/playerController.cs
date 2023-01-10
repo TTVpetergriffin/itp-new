@@ -13,12 +13,14 @@ public class playerController : MonoBehaviour
     public float horizontalInput;
     public float forwardInput;
     public TextMeshProUGUI healthText;
+    public bool tomfoolery;
     // Start is called before the first frame update
     void Start()
     {
         speed = 5;
         health = 3;
         UpdateHealth(0);
+        tomfoolery = false;
     }
 
     // Update is called once per frame
@@ -29,7 +31,11 @@ public class playerController : MonoBehaviour
         //right so the goal here is to get noah movin  
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
-
+        if(tomfoolery == true)
+        {
+            speed = 1;
+        }
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -44,11 +50,12 @@ public class playerController : MonoBehaviour
         if (trigger.gameObject.tag == "5g")
         {
             speed = 1;
-           
+            tomfoolery = true;
         }
         if (trigger.gameObject.tag == "5gsoftball")
         {
-
+            speed = 1;
+            StartCoroutine(Soaft());
         }
     }
     private void OnTriggerExit(Collider trigger)
@@ -56,12 +63,18 @@ public class playerController : MonoBehaviour
         if (trigger.gameObject.tag == "5g")
         {
             speed = 5;
+            tomfoolery = false;
         }
     }
     private void UpdateHealth(int healthToSteal)
     {
         health += healthToSteal;
         healthText.text = "Health: " + health;
+    }
+    IEnumerator Soaft()
+    {
+        yield return new WaitForSeconds(2);
+        speed = 5;
     }
 }
 
