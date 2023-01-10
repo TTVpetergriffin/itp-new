@@ -46,6 +46,10 @@ public class playerController : MonoBehaviour
             speed = 1;
            
         }
+        if (trigger.gameObject.tag == "5gsoftball")
+        {
+
+        }
     }
     private void OnTriggerExit(Collider trigger)
     {
