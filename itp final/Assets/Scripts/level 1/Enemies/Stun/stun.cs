@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stunthrow : MonoBehaviour
+public class stun : MonoBehaviour
 {
     public float speed;
     public float health;
@@ -13,8 +13,8 @@ public class stunthrow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 2;
-        health = 2f;
+        speed = 1.5f;
+        health = 4f;
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Main Character");
         danger = false;
