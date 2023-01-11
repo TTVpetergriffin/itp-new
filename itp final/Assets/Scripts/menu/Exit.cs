@@ -44,4 +44,12 @@ public class Exit : MonoBehaviour
         helper.SetActive(false);
         menu.SetActive(true);
     }
+    public void Titlereturn()
+    {
+        SceneManager.LoadScene("Title");
+    }
+    public void Level2()
+    {
+        SceneManager.LoadScene("level 2");
+    }
 }

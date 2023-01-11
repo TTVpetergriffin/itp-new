@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class woodpieceobj : MonoBehaviour
 {
-    public GameObject Woodpiece1;
+    public GameObject Shipiece1;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class woodpieceobj : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Woodpiece1.SetActive(true);
+            Shipiece1.SetActive(true);
             Destroy(this.gameObject);
         }
     }
