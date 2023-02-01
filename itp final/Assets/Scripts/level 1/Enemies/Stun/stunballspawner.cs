@@ -4,34 +4,42 @@ using UnityEngine;
 
 public class stunballspawner : MonoBehaviour
 {
-    public bool danger;
     public GameObject Softball;
     public bool canthrow;
+    public bool thething;
+    public bool thething0;
+    public bool danger;
     // Start is called before the first frame update
     void Start()
     {
-        canthrow = true;
+        danger = GameObject.Find("softballdude").GetComponent<stun>().danger;
+        thething = true;
+        thething0 = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        danger = GameObject.Find("softballdude").GetComponent<stun>().danger;
-        if (danger == true)
+        if (thething0 == true && thething == true)
         {
             StartCoroutine(Ballin());
+            Instantiate(Softball, transform.position, transform.rotation);
+            
+        }
+    }
+    private void OnTriggerEnter (Collider trigger)
+    {
+        if (danger = true)
+        {
+            thething0 = true;
         }
     }
     IEnumerator Ballin()
     {
-        yield return new WaitForSeconds(0);
-        Instantiate(Softball, transform.position, transform.rotation);
-        canthrow = false;
-        StartCoroutine(Cooldown());
-    }
-    IEnumerator Cooldown()
-    {
         yield return new WaitForSeconds(2);
-        canthrow = true;
+        thething = false;
+        thething0 = false;
+        Instantiate(Softball, transform.position, transform.rotation);
+        StartCoroutine(Ballin());
     }
 }

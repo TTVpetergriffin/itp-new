@@ -47,7 +47,7 @@ public class stun : MonoBehaviour
     }
     private void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.name == "dangerzone")
+        if (trigger.gameObject.tag == "aoe")
         {
             danger = true;
         }
